@@ -1,0 +1,25 @@
+{
+  "name": "angular-darkroom",
+  "version": "0.0.1",
+  "homepage": "https://github.com/natecox/angular-darkroomjs",
+  "authors": [
+    "Nathan Cox <akujin@akujin.com>"
+  ],
+  "description": "AngularJS Directive for Darkroom.js",
+  "main": "dist/js/angular-darkroom.min.js",
+  "keywords": [
+    "angular",
+    "darkroom"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "darkroomjs": "*"
+  }
+}
