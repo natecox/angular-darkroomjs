@@ -20,6 +20,12 @@
     "tests"
   ],
   "dependencies": {
-    "darkroomjs": "*"
+    "darkroomjs": "*",
+    "angular": "1.3.4",
+    "fabric": "1.4.0"
+  },
+  "devDependencies": {
+    "ng-flow": "~2.6.0",
+    "foundation": "~5.5.1"
   }
 }
