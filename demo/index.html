@@ -39,6 +39,15 @@
             <div class="button" flow-btn>Upload</div>
           </div>
           <div class="small-12 columns">
+            <p>Or, Add an image via URL</p>
+          </div>
+          <div class="small-12 columns">
+            <input type="text" ng-model="dr_ctrl.image_url" />
+          </div>
+          <div class="small-12 columns">
+            <div class="button" ng-click="dr_ctrl.upload_by_url()">Download</div>
+          </div>
+          <div class="small-12 columns">
             <img class="preview-image" ng-src="{{ dr_ctrl.preview_image }}">
           </div>
         </div>
