@@ -1,6 +1,10 @@
 (function(fabric, angular) {
     'use strict';
 
+    var AppConfig = function(flowFactoryProvider) {
+        flowFactoryProvider.defaults = {singleFile: true};
+    };
+
     var AppCtrl = function($scope) {
         var _me = this;
         _me.image = '';
@@ -27,7 +31,7 @@
             console.log('called', _me.image_url);
             fabric.Image.fromURL(_me.image_url, function(img) {
                 console.log(img.toString());
-            })
+            });
             _me.image = _me.image_url;
         };
 
@@ -36,9 +40,10 @@
         });
 
         return _me;
-    }
+    };
 
     angular
         .module('ncDarkroomTest', ['flow', 'angular-darkroom'])
+        .config(AppConfig)
         .controller('AppCtrl', AppCtrl);
 })(fabric, angular);
