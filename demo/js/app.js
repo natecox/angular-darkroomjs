@@ -1,5 +1,9 @@
-(function() {
+(function(angular) {
     'use strict';
+
+    var AppConfig = function(flowFactoryProvider) {
+        flowFactoryProvider.defaults = {singleFile: true};
+    }
 
     var AppCtrl = function($scope) {
         var _me = this;
@@ -30,5 +34,6 @@
 
     angular
         .module('ncDarkroomTest', ['flow', 'angular-darkroom'])
+        .config(AppConfig)
         .controller('AppCtrl', AppCtrl);
-})();
+})(angular);
