@@ -1,4 +1,5 @@
 <html>
+
 <head>
   <title>Darkroom Directive</title>
 
@@ -13,6 +14,7 @@
   <script src="vendor/ng-flow/dist/ng-flow.min.js"></script>
   <script src="../dist/js/angular-darkroom.min.js"></script>
 </head>
+
 <body>
   <div ng-app='ncDarkroomTest' ng-controller='AppCtrl as dr_ctrl' flow-init>
     <nav class="top-bar" data-topbar role="navigation">
@@ -39,13 +41,22 @@
             <div class="button" flow-btn>Upload</div>
           </div>
           <div class="small-12 columns">
+            <p>Or, Add an image via URL</p>
+          </div>
+          <div class="small-12 columns">
+            <input type="text" ng-model="dr_ctrl.image_url" />
+          </div>
+          <div class="small-12 columns">
+            <div class="button" ng-click="dr_ctrl.upload_by_url()">Download</div>
+          </div>
+          <div class="small-12 columns">
             <img class="preview-image" ng-src="{{ dr_ctrl.preview_image }}">
           </div>
         </div>
       </div>
 
       <div class="small-8 columns">
-        <nc-darkroom image="dr_ctrl.image" 
+        <nc-darkroom image="dr_ctrl.image"
                      on-crop="dr_ctrl.image_changed(image)"
                      history="true"
                      crop="{}"
@@ -58,4 +69,5 @@
 
   <script src="js/app.js"></script>
 </body>
+
 </html>
