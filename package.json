@@ -1,7 +1,7 @@
 {
   "name": "angular-darkroomjs",
   "description": "Angular directive for Darkroom.js",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": "Nathan Cox",
   "license": "MIT",
   "dependencies": {
